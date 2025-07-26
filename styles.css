@@ -2,4 +2,163 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar,.header,.main{
+    display: grid;
+    justify-content: center;
+    align-self: stretch;
+}
+
+.sidebar{
+    align-self: stretch;
+    background-color: rgb(25 146 212);
+    display: grid;
+    justify-content: stretch;
+    color: white;
+    gap: 30px;
+    grid-row: 1/3;
+}
+
+.sidebar *{
+    color: white;
+}
+
+.header::not(button){
+    color: black;
+}
+
+.header{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.main{
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(226 232 240);
+    grid-column: 2;
+}
+
+ul{
+    list-style: none;
+}
+
+.sidebar-title{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.sidebar-title{
+    margin-top: 1rem;
+    font-size: 25px;
+    gap: 5px;
+}
+.sidebar-title svg{
+    height: 50px;
+    margin-left: 1rem;
+}
+.sidebar-list-first-item,.sidebar-list-second-item{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 1.2em;
+    gap: 30px;
+}
+li svg{
+    margin-left: 1.2em;
+}
+svg{
+    height: 20px;
+}
+
+.search-input{
+    border: none;
+    border-radius: 5000rem;
+    background-color: rgb(226 232 240);
+    padding: 7px;
+}
+
+button{
+    background-color: rgb(25 146 212);
+    border: none;
+    color: white;
+    width: clamp(0px, 100px, 100px);
+    padding: 10px 0px;
+    border-radius: clamp(0px, 50px, 50px);
+}
+.header-first-row,.header-second-row{
+    width: 100%;
+}
+.header-first-row,.header-second-row,.search-field-wrapper,.account-details-wrapper,.profile-header-wrapper,.button-wrapper{
+    display: flex;
+    align-items: center;
+}
+.header-first-row *:not(img), .header-second-row *:not(img){
+    flex: 1;
+}
+.button-wrapper{
+    gap: 20px;
+}
+
+img{
+    height: 50px;
+    border-radius: 70%;
+}
+
+.profile-header-wrapper img{
+    height: 70px;
+}
+
+.title{
+    color: black;
+    font-weight: bold;
+}
+
+article{
+    background-color: white;
+}
+
+.main-title{
+    /* position: absolute; */
+    grid-column: 1/-1;
+}
+
+.main-first-column{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.main-second-column{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+p{
+    color: rgb(99 99 99);
+}
+
+.main-second-column-second-list li{
+    display: flex;
+}
+
+.account-name{
+    color: black;
+}
+
+/* .trend-info-wrapper{
+    display: flex;
+} */
+
+/* .card-wrapper{
+    display: grid;
+} */
